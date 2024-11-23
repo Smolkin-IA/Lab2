@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:rowCount="4"
+        android:columnCount="5">
+
+        <EditText
+            android:id="@+id/first_value"
+            android:inputType="number"
+            android:layout_width="110dp"
+            android:layout_height="48dp"/>
+
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="20dp"
+            android:text="+"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/second_value"
+            android:inputType="number"
+            android:layout_width="110dp"
+            android:layout_height="48dp"/>
+
+        <TextView
+            android:layout_width="20dp"
+            android:text="="
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/result"
+            android:layout_width="110dp"
+            android:layout_height="48dp"/>
+
+        <Button
+            android:id="@+id/plus_btn"
+            android:layout_width="105dp"
+            android:layout_height="106dp"
+            android:layout_rowSpan="2"
+            android:text="+"
+            android:textSize="25sp"
+            app:cornerRadius="0dp"
+            android:onClick="onOperatorBtnClick"/>
+
+        <Button
+            android:id="@+id/minus_btn"
+            android:layout_width="125dp"
+            android:layout_columnSpan="2"
+            android:text="-"
+            android:textSize="25sp"
+            app:cornerRadius="0dp"
+            android:onClick="onOperatorBtnClick"/>
+
+        <Button
+            android:id="@+id/divdsion_btn"
+            android:layout_width="130dp"
+            android:layout_columnSpan="2"
+            android:text="/"
+            android:textSize="25sp"
+            app:cornerRadius="0dp"
+            android:onClick="onOperatorBtnClick"/>
+
+        <Button
+            android:id="@+id/multiply_btn"
+            android:layout_width="260dp"
+            android:layout_columnSpan="4"
+            android:text="*"
+            android:textSize="25sp"
+            app:cornerRadius="0dp"
+            android:onClick="onOperatorBtnClick"/>
+
+        <Button
+            android:id="@+id/clear_btn"
+            android:layout_columnSpan="3"
+            android:width="235dp"
+            android:text="C"
+            app:cornerRadius="0dp"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/calculate_btn"
+            android:layout_columnSpan="2"
+            android:layout_width="130dp"
+            android:text="="
+            android:textSize="25sp"
+            app:cornerRadius="0dp"/>
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
